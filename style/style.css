@@ -1,0 +1,592 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    /*font-family: 'Roboto', sans-serif;*/
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+
+}
+body {
+    width: 100%;
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    color: #333333;
+}
+ 
+/*----- section description и общие классы-----*/
+section, .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.sectionTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    /*margin-top: 45px;*/
+}
+.sectionSubTitle, .itemTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-top: 15px;
+}
+
+.sectionWrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+.itemInfo, .iconDescr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    margin: 13px 0;
+}
+button.accentButton {
+    width: 250px;
+    height: 51.34px;
+    border: none;
+    background-color: #FED100;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+}
+a {
+    color: #333
+}
+/*----- section paddings -----*/
+.howItWork {
+    padding: 47px 0 61px;
+}
+.priceBlock {
+    padding: 43px 0 83px;
+}
+.truckFleet {
+    padding: 71px 0 63px;
+}
+.feedback {
+    padding: 83px 0 111px;
+}
+.order {
+    padding: 107px 0 123px;
+}
+footer {
+    padding: 104px 0 102px;
+}
+
+/*---- header -----*/
+.logo {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+}
+header {
+    background-color: #FED100;
+    padding: 70px 15.4% 0 16.4%;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 23.4%;
+}
+nav ul li {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 25px;
+    cursor: pointer;
+    z-index: 100;
+}
+nav .phone {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+}
+.headerMain {
+    display: flex;
+}
+.headerMainTitle {
+    width: 44%;
+}
+.headerMainTitle .title {
+    margin: 56px 0 44px 0;
+}
+.headerMainTitle h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 70px;
+    -webkit-text-stroke: 0.1px #000;
+    -webkit-text-fill-color: #333;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.headerMainTitle h2 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 70px;
+} 
+.headerMainTitle h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+}
+.headerMainTitle button {
+    width: 304px;
+    height: 53.55px;
+    background-color: #FF352B;
+    border: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    color: #F2F2F2;
+    cursor: pointer;
+}
+.headerMainTitle .button {
+    position: relative;
+    z-index: 1;
+}
+.headerMainTitle .button::before {
+    content: "";
+    width: 304px;
+    height: 53.55px;
+    outline: 2px solid #F2F2F2;
+    position: absolute;
+    left: 10px;
+    bottom: -10px;
+    z-index: -1;
+}
+.headerMainTitle button:active {
+    transform: translate(10px, 10px);
+}
+.headerMainTitle .iconContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 68px 0 158px 0;
+}
+.headerMainTitle .iconContainer .iconContainerInner {
+    display: flex;
+    align-items: center;
+}
+.headerMainTitle .icon .fa-solid{
+    margin-right: 10px;
+}
+/*.headerMainTitle .iconDecr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}*/
+.headerMainPics {
+    position: relative;
+    display: flex;
+}
+.headerMainPics .man {
+    position: absolute;
+    left: 80px;
+    bottom: -4px;
+    z-index: 10;
+}
+.headerMainPics .car {
+    position: absolute;
+    left: 380px;
+    top: 60px;
+    z-index: 0;
+}
+.headerMainPics .phoneImg{
+    position: absolute;
+    left: 600px;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgba(61, 155, 233, 0.8);
+    font-size: 52px;
+    color: #fff;
+    cursor: pointer;
+}
+.headerMainPics .phoneImg::after,
+.headerMainPics .phoneImg::before {
+    content: "";
+    position: absolute;
+    width: 136px;
+    height: 121px;
+    border-radius: 50%;
+    background-color: rgba(61, 155, 233, 0.3);
+    animation: pulse 1.5s linear infinite;
+}
+.headerMainPics .phoneImg::after {
+    animation-delay: 0.5s;
+}
+@keyframes pulse {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+
+main {
+    width: 100%;
+}
+
+
+/*---- howItWorks ----*/
+.stepGrid {
+    width: 57vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, minmax(102, 1fr));
+    grid-column-gap: 7vw;
+    grid-row-gap: 5vh;
+}
+.stepItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.stepPosition {
+    /*margin-right: 40px;*/
+    position: relative;
+    top: 12px;
+    left: -40px;
+}
+.stepTitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+}
+.stepDescr {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+}
+/*----- priceBlock -----*/
+.priceCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 23px
+}
+.card {
+    padding: 84px 93px 79px;
+    border: 1px solid #ebebeb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card:hover {
+    border: 1px solid #FED100;
+
+}
+
+.cardPrice {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 47px 0 52px;
+}
+.card .itemTitle {
+    margin-bottom: 47px;
+}
+
+/*----- truck fleet -----*/
+.truckOrder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttonSet {
+    display: grid;
+    grid-template-columns: repeat(3, 201px);
+    grid-gap: 19px;
+    margin-bottom: 47px;
+}
+.buttonSet button {
+    width: 201px;
+    height: 50px;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+.buttonSet button:hover {
+    border: 1px solid #FED100;
+}
+.buttonSet button:active {
+    border: 1px solid #FED100;
+}
+.invisible {
+    display: none;
+}
+.truckInfo {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-gap: 112px;
+}
+
+.truckInfo .truckDescr .itemTitle {
+    margin-bottom: 24px;
+}
+.truckDescr .fa-solid {
+    margin-right: 15px;
+}
+.truckDescr button {
+    margin-top: 22px;
+}
+/*----- feedback -----*/
+.feedback {
+    background-color: #FED100;
+}
+.feedbackSet {
+    display: grid;
+    grid-template-columns: repeat(3, 420px);
+    grid-gap: 21px;
+}
+.feedbackItem span {
+    color: #FF352B;
+    margin-left: 8.5px;
+}
+.feedbackItem a {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.feedback button {
+    margin-top: 61px;
+    width: 250px;
+    height: 50px;
+    border: 1px solid #333333;
+    background-color: transparent;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/*----- order -----*/
+.order {
+    align-items: flex-start;
+    width: auto;
+}
+.order form {
+    display: flex;
+    flex-wrap: wrap;
+}
+.order form .inputField {
+    position: relative;
+}
+.order form .inputField .inputPlaceholder {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(51, 51, 51, 0.7);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+.order form .input {
+    width: 300px;
+    height: 55px;
+    border: none;
+    border-bottom: 1px solid #333333;
+    margin-right: 70px;
+    margin-top: 22px;
+    padding-left: 5px;
+    outline: none;
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(51, 51, 51, 1);
+    transition: all 0.2s ease;
+}
+.order form .input:hover {
+    background-color: rgba(0, 0, 0, 0.04);;
+}
+.order form .input:focus {
+    background-color: #FED100;
+}
+.order form .input:focus + .inputPlaceholder {
+    transform: translate(-20px, -25px) scale(0.5);
+    font-weight: 700;
+    color: #333;
+}
+.order form .input:not(:placeholder-shown) {
+    background-color: #FED100;
+}
+.order form .input:not(:placeholder-shown) + .inputPlaceholder {
+    transform: translate(-20px, -25px) scale(0.5);
+    font-weight: 700;
+    color: #333;
+  }
+/*.order form input::placeholder {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(51, 51, 51, 0.7);
+}*/
+.order form .callMeButton {
+    width: 250px;
+    height: 50px;
+    background-color: #FF352B;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #F2F2F2;
+    border: none;
+    outline: none;
+    position: relative;
+    margin: 22px 0;
+
+}
+
+.order form .callMeButton:active {
+    transform: translate(10px, 10px);
+    border: 1px solid #FED100;
+
+}
+.order form .agreement {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+}
+.order form .agreement input {
+    margin-right: 10px;
+    margin-top: 0;
+    width: 15px;
+    height: 16px;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 2px solid #333;
+    outline: none;
+    border-radius: 2px/2px;
+    position: relative;
+    box-shadow: none;
+}
+.order form .agreement input:checked::after {
+    content: url("../media/checkmarkpure.svg");
+    position: absolute;
+    bottom: -2px;
+    left: 0px;
+    width: 15px;
+    height: 15px;
+}
+/*----- address -----*/
+
+address .location {
+    width: 100%;
+    /*height: 30vh;*/
+    text-align: center;
+}
+iframe {
+    width: 100%;
+    height: 60vh;
+}
+
+/*----- footer -----*/
+footer {
+    padding: 104px 0 102px;
+    background-color: #FED100;
+    
+}
+.footerText {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+.footerWrap {
+    width: 100%;
+    display: grid;
+    /*grid-template-columns: 238px 145px 166px 250px;*/
+    grid-template-columns: repeat(auto-fit, minmax(145px, 250px));
+    grid-column-gap: 169px;
+    grid-row-gap: 20px;
+    justify-content: center;
+}
+.footerLogo p:nth-child(2) {
+    margin: 36px 0;
+}
+.footerNav ul {
+    list-style: none;
+}
+.footerNav ul li {
+    margin-bottom: 15px;
+}
+.footerSocial .fa-brands{
+    width: 18px;
+    height: 18px;
+}
+
+.footerSocial p span:nth-child(-n+3) {
+    margin-right: 27px;
+ 
+}
+.footerSocial p:last-child {
+    position: relative;
+    margin-top: 20px;
+}
+.footerSocial p:last-child::after{
+    content: "_________________";
+    color: #333333;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+.footerPhoneback {
+    text-align: center;
+}
+.footerPhoneback button{
+    width: 250px;
+    height: 44px;
+    background-color: #FED100;
+    border: 1px solid #333333;
+}
+.footerPhoneback p {
+    margin-top: 5px;
+    position: relative;
+}
+.footerPhoneback p::after {
+    content: "";
+    height: 1px;
+    width: 68%;
+    background-color: #333333;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+}
