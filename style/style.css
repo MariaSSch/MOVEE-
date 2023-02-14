@@ -295,7 +295,7 @@ main {
     min-width: 0; 
 }
 .swiper {
-    max-width: 68vw;
+    max-width: 69vw;
     box-sizing: content-box;
 }
 .card {
@@ -352,6 +352,7 @@ main {
 .invisible {
     display: none;
 }
+
 .truckInfo {
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -375,6 +376,7 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 420px);
     grid-gap: 21px;
+
 }
 .feedbackItem span {
     color: #FF352B;
@@ -395,6 +397,33 @@ main {
     line-height: 24px;
 }
 
+/*----- ----- feedbackslider ----- -----*/
+/*
+.feedback .slider-container {
+    overflow: hidden;
+}
+.feedback .slider-wrap {
+        overflow: hidden;
+}
+.feedback .dotContainer {
+    display: none;
+    position: relative;
+    bottom: -50px;
+}
+.feedback .dotContainer div:nth-child(even) {
+    margin: 0 10px;
+}
+.feedback .dotContainer div {
+    background-color: #fff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.feedback .dotContainer div:active {
+    background-color: #FED100;
+}
+*/
 /*----- order -----*/
 .order {
     align-items: flex-start;

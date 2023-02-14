@@ -10,13 +10,13 @@ navArr.forEach((elem, index) => {
 
 
 //tab trucks
-const btnSet = document.querySelectorAll(".buttonSet button");
+const btnSet = document.querySelector(".buttonSet");
 const trucksArr = document.querySelectorAll(".truck");
 
-btnSet.forEach((elem, index) => {
-    elem.addEventListener("click", event => {
-        const activeBtn = event.target;
-        let activeBtnIndex = [...activeBtn.parentNode.children].indexOf(activeBtn);
+btnSet.addEventListener("click", (event) => {
+    let activeBtn = event.target;
+    
+    let activeBtnIndex = [...activeBtn.parentNode.children].indexOf(activeBtn);
         
         trucksArr.forEach((truck) => {
             truck.classList.remove("truckInfo");
@@ -24,11 +24,9 @@ btnSet.forEach((elem, index) => {
         });
 
         trucksArr.item(activeBtnIndex).classList.add("truckInfo");
-    })
 })
 
-
-//feedback
+//feedback - сборка раздела
 
 const feedbackArr = [
     {
@@ -69,8 +67,6 @@ feedbackSet.append(...feedbackArr.map((item) => {
     for(let i=1; i<=item.stars; i++) {
             spanStar.innerHTML +='<i class="fa-solid fa-star"></i>'
         }
-    
-
     const itemMessage = document.createElement("p");
     itemMessage.classList.add("itemInfo");
     itemMessage.innerText = item.message;
@@ -86,3 +82,33 @@ feedbackSet.append(...feedbackArr.map((item) => {
 })
 )
 
+//feedback - слайдер
+/*
+const sliderContainer = document.querySelector(".slider-container");
+const sliderWrap = document.querySelector(".slider-wrap"); //feedbackSet
+const dotContainer = document.querySelector(".dotContainer");
+const feedbackBtn = document.querySelector(".feedback button");
+const slide = document.querySelector(".feedbackItem");
+
+let slideWidth = slide.offstWidth;
+
+dotContainer.append(...feedbackArr.map((item, index) => {
+    const dotElem = document.createElement("div");
+    
+    dotElem.addEventListener("click", () => {
+        console.log(index)
+    })
+    return dotElem;
+})
+)
+
+window.addEventListener("resize", () => {
+
+    if(document.documentElement.clientWidth <= 1400) {
+        dotContainer.style.display = "flex";
+        feedbackBtn.style.display = "none";
+    } else if (992 >= document.documentElement.clientWidth <= 1400) {
+        sliderWrap.style.width = slideWidth * 2 + "px";
+    }
+     })
+*/
