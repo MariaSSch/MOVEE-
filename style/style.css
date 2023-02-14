@@ -5,10 +5,11 @@
     padding: 0;
     text-decoration: none;
     outline: none;
+    box-sizing: border-box;
 
 }
 body {
-    width: 100%;
+    /*width: 100%;*/
     /*display: flex;
     flex-direction: column;
     align-items: center;*/
@@ -192,12 +193,6 @@ nav .phone {
 .headerMainTitle .icon .fa-solid{
     margin-right: 10px;
 }
-/*.headerMainTitle .iconDecr {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 21px;
-}*/
 .headerMainPics {
     position: relative;
     display: flex;
@@ -295,17 +290,21 @@ main {
     line-height: 21px;
 }
 /*----- priceBlock -----*/
-.priceCards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 23px
+
+.priceBlock .sectionWrap {
+    min-width: 0; 
+}
+.swiper {
+    max-width: 68vw;
+    box-sizing: content-box;
 }
 .card {
-    padding: 84px 93px 79px;
+    padding: 84px 13px 79px;
     border: 1px solid #ebebeb;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .card:hover {
     border: 1px solid #FED100;

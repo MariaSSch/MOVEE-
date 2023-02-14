@@ -9,7 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+
     <link rel="stylesheet" type= "text/css" href="style/style.css">
+
+
+
     <title>MOVEE</title>
 </head>
 <body>
@@ -32,8 +37,8 @@
                     <h3>По Москве и области</h3>
                 </div>
                 <div class="button"><button>Заказать</button></div>
-                <div class="iconContainer">
-                   <div  class="iconContainerInner">
+                <div class="iconContainer"><!--flex-->
+                   <div  class="iconContainerInner"><!--flex-->
                         <p class="icon"><i class="fa-solid fa-truck fa-2x"></i></p>
                         <p class="iconDescr">Более 800</br> переездов</p>
                     </div>
@@ -100,9 +105,9 @@
         <section class="priceBlock scrollToSection">
             <h3 class="sectionTitle">Цены </h3>
             <h3 class="sectionSubTitle">Фиксированная стоимость на переезд под ключ</h3>
-            <div class="sectionWrap">
-                <div class="priceCards">
-                    <div class="card">
+            <div class="sectionWrap swiper"><!--sectionWrap-->
+                <div class="swiper-wrapper priceCards"><!---->
+                    <div class="card swiper-slide"><!---->
                         <p class="itemTitle">1-комнатная кв-ра</p>
                         <p class="itemInfo">1 фургон</p>
                         <p class="itemInfo">2 грузчика</p>
@@ -111,7 +116,7 @@
                         <button class="accentButton">Заказать</button>
                     </div>
 
-                    <div class="card">
+                    <div class="swiper-slide card"><!---->
                         <p class="itemTitle">2-комнатная кв-ра</p>
                         <p class="itemInfo">1 газель - 3 метра</p>
                         <p class="itemInfo">2 грузчика</p>
@@ -119,7 +124,7 @@
                         <p class="cardPrice">10 990₽</p>
                         <button class="accentButton">Заказать</button>
                     </div>
-                    <div class="card">
+                    <div class="card swiper-slide"><!---->
                         <p class="itemTitle">3-комнатная кв-ра</p>
                         <p class="itemInfo">1 газель - 4 метра</p>
                         <p class="itemInfo">2 грузчика</p>
@@ -269,8 +274,12 @@
             </div>
         </div>
     </footer>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="script/swiper.js" type="text/javascript"></script>
+
     <script src="script/script.js" type="text/javascript"></script>
+
 
 </body>
 </html>
