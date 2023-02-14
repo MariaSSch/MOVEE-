@@ -354,11 +354,46 @@ main {
 }
 
 .truckInfo {
+    width: 52.2vw;
+    height: auto;
     display: grid;
     grid-template-columns: 250px 1fr;
     grid-gap: 112px;
+
+}
+@media(max-width: 992px) {
+    .truckInfo {
+        display: grid;
+        grid-template-columns: 250px;
+        grid-auto-rows: minmax(277px, auto);
+        grid-gap: 20px;
+        justify-content: center;
+    }
+    .truckInfo .truckImg {
+        grid-row: 1;
+    }
+}
+@media(max-width: 768px) {
+    .buttonSet {
+        display: grid;
+        grid-template-columns: 201px;
+        grid-template-rows: repeat(3, auto);
+        grid-gap: 19px;
+        margin-bottom: 47px;
+    }
+    
 }
 
+
+.truckInfo .truckImg {
+    /*background-image: url(../media/gazel_yellow.png);*/
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.truckInfo .truckDescr {
+    margin: auto 0;
+}
 .truckInfo .truckDescr .itemTitle {
     margin-bottom: 24px;
 }

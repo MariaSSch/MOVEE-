@@ -8,7 +8,6 @@ navArr.forEach((elem, index) => {
     })
 });
 
-
 //tab trucks
 const btnSet = document.querySelector(".buttonSet");
 const trucksArr = document.querySelectorAll(".truck");
@@ -25,6 +24,20 @@ btnSet.addEventListener("click", (event) => {
 
         trucksArr.item(activeBtnIndex).classList.add("truckInfo");
 })
+//trucks img
+
+const truckImgArr = ["gazel.png", "largus.png", "scania.png"];
+const truckImgElems = document.querySelectorAll(".truckImg");
+const mediaPath = "media/"
+
+truckImgArr.map((img, index) => {
+    truckImgElems.forEach(truck => {
+        if(index === [...truckImgElems].indexOf(truck)) {
+            truck.style.backgroundImage = `url("${mediaPath + img}")`
+        }
+    })
+})
+
 
 //feedback - сборка раздела
 
