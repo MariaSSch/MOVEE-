@@ -271,7 +271,6 @@ main {
     align-items: flex-start;
 }
 .stepPosition {
-    /*margin-right: 40px;*/
     position: relative;
     top: 12px;
     left: -40px;
@@ -294,9 +293,8 @@ main {
 .priceBlock .sectionWrap {
     min-width: 0; 
 }
-.swiper {
+.priceBlock .swiper {
     max-width: 69vw;
-    box-sizing: content-box;
 }
 .card {
     padding: 84px 13px 79px;
@@ -386,7 +384,6 @@ main {
 
 
 .truckInfo .truckImg {
-    /*background-image: url(../media/gazel_yellow.png);*/
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -407,12 +404,14 @@ main {
 .feedback {
     background-color: #FED100;
 }
-.feedbackSet {
-    display: grid;
-    grid-template-columns: repeat(3, 420px);
-    grid-gap: 21px;
-
+.feedback .sectionWrap { /*for swiper*/
+    min-width: 0; 
 }
+
+.feedback .swiper {
+    max-width: 80vw;
+}
+
 .feedbackItem span {
     color: #FF352B;
     margin-left: 8.5px;
@@ -432,33 +431,13 @@ main {
     line-height: 24px;
 }
 
-/*----- ----- feedbackslider ----- -----*/
-/*
-.feedback .slider-container {
-    overflow: hidden;
+@media(max-width: 1400px) {
+    .feedback button {
+        display: none;
+    }
 }
-.feedback .slider-wrap {
-        overflow: hidden;
-}
-.feedback .dotContainer {
-    display: none;
-    position: relative;
-    bottom: -50px;
-}
-.feedback .dotContainer div:nth-child(even) {
-    margin: 0 10px;
-}
-.feedback .dotContainer div {
-    background-color: #fff;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-.feedback .dotContainer div:active {
-    background-color: #FED100;
-}
-*/
+
+
 /*----- order -----*/
 .order {
     align-items: flex-start;

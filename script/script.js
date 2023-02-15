@@ -67,6 +67,7 @@ const feedbackSet = document.querySelector(".feedbackSet");
 feedbackSet.append(...feedbackArr.map((item) => {
     const feedbackItem = document.createElement("div");
     feedbackItem.classList.add("feedbackItem");
+    feedbackItem.classList.add("swiper-slide");
 
     const itemTitle = document.createElement("p");
     itemTitle.classList.add("itemTitle");
