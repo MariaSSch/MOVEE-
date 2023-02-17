@@ -96,33 +96,5 @@ feedbackSet.append(...feedbackArr.map((item) => {
 })
 )
 
-//feedback - слайдер
-/*
-const sliderContainer = document.querySelector(".slider-container");
-const sliderWrap = document.querySelector(".slider-wrap"); //feedbackSet
-const dotContainer = document.querySelector(".dotContainer");
-const feedbackBtn = document.querySelector(".feedback button");
-const slide = document.querySelector(".feedbackItem");
+//howItWorks slider
 
-let slideWidth = slide.offstWidth;
-
-dotContainer.append(...feedbackArr.map((item, index) => {
-    const dotElem = document.createElement("div");
-    
-    dotElem.addEventListener("click", () => {
-        console.log(index)
-    })
-    return dotElem;
-})
-)
-
-window.addEventListener("resize", () => {
-
-    if(document.documentElement.clientWidth <= 1400) {
-        dotContainer.style.display = "flex";
-        feedbackBtn.style.display = "none";
-    } else if (992 >= document.documentElement.clientWidth <= 1400) {
-        sliderWrap.style.width = slideWidth * 2 + "px";
-    }
-     })
-*/

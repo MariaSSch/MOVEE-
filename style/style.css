@@ -257,7 +257,7 @@ main {
 
 
 /*---- howItWorks ----*/
-.stepGrid {
+.stepCards {
     width: 57vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -265,6 +265,13 @@ main {
     grid-column-gap: 7vw;
     grid-row-gap: 5vh;
 }
+.sliderTriggers {
+    display: none;
+}
+.sliderMarkers {
+    display: none;
+}
+
 .stepItem {
     display: flex;
     justify-content: space-between;
@@ -288,6 +295,72 @@ main {
     font-size: 16px;
     line-height: 21px;
 }
+
+@media (max-width: 768px) {
+    .stepPosition {
+        left: -10px;
+    }
+    .stepPosition img {
+        transform: scale(0.7);
+    }
+    .stepTitle {
+        font-size: 18px;
+    }
+    .stepDescr {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .stepCards {
+        position: relative;
+        left: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+    .stepItem {
+        width: 90%;
+        height: 150px;
+
+    }
+    .sliderTriggers {
+        width: 130%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        align-self: center;
+        position: relative;
+        bottom: 200px;
+    }
+    .trigger {
+        color: #333;
+        font-size: 42px;
+        cursor: pointer;
+        transition: color 0.5s ease;
+    }
+    .trigger:hover {
+        color: #FED100;
+    }
+    .sliderMarkers {
+        display: flex;
+    }
+    .sliderMarkers > div {
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: #333333;
+        margin-left: 10px;
+        transition: background-color 0.5s ease;
+
+    }
+}
+
+
 /*----- priceBlock -----*/
 
 .priceBlock .sectionWrap {
