@@ -16,6 +16,27 @@ body {
     color: #333333;
 }
  
+/*----- section paddings -----*/
+.howItWork {
+    padding: 47px 0 61px;
+}
+.priceBlock {
+    padding: 43px 0 83px;
+}
+.truckFleet {
+    padding: 71px 0 63px;
+}
+.feedback {
+    padding: 83px 0 111px;
+}
+.order {
+    padding: 107px 0 123px;
+}
+footer {
+    padding: 104px 0 102px;
+}
+
+
 /*----- section description и общие классы-----*/
 section, .section {
     display: flex;
@@ -36,8 +57,17 @@ section, .section {
     font-size: 24px;
     line-height: 29px;
     margin-top: 15px;
+    text-align: center;
 }
-
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 24px;
+    }
+    .sectionSubTitle, .itemTitle {
+        font-size: 18px;
+    }
+    
+}
 .sectionWrap {
     display: flex;
     justify-content: center;
@@ -64,47 +94,37 @@ button.accentButton {
 a {
     color: #333
 }
-/*----- section paddings -----*/
-.howItWork {
-    padding: 47px 0 61px;
-}
-.priceBlock {
-    padding: 43px 0 83px;
-}
-.truckFleet {
-    padding: 71px 0 63px;
-}
-.feedback {
-    padding: 83px 0 111px;
-}
-.order {
-    padding: 107px 0 123px;
-}
-footer {
-    padding: 104px 0 102px;
-}
 
 /*---- header -----*/
+
+header {
+    background-color: #FED100;
+    padding: 70px 10.5vw 0 15.4vw;
+    /* padding: 70px 0 0 0; */
+    position: relative; /*for phoneImg*/
+
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 10.5vw 0 15.4vw; */
+}
 .logo {
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
     line-height: 37px;
 }
-header {
-    background-color: #FED100;
-    padding: 70px 15.4% 0 16.4%;
-}
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 nav ul {
     display: flex;
     list-style: none;
-    width: 23.4%;
 }
 nav ul li {
     font-style: normal;
@@ -120,12 +140,36 @@ nav .phone {
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;
+    /*grid*/
+    justify-self: flex-end;
 }
+
+nav .menuBtn {
+    font-size: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+nav .menuOn {
+    top: 80px;
+}   
+nav .menuOn li {
+    margin: 0;
+    margin-top: 20px;
+}
+
+
 .headerMain {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
 .headerMainTitle {
-    width: 44%;
+    margin-right: 4.15vw; /*80px*/
+    align-self: flex-start;
 }
 .headerMainTitle .title {
     margin: 56px 0 44px 0;
@@ -135,16 +179,14 @@ nav .phone {
     font-weight: 700;
     font-size: 70px;
     line-height: 70px;
+} 
+.headerMainTitle h1 span {
     -webkit-text-stroke: 0.1px #000;
     -webkit-text-fill-color: #333;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    margin-right: 94px; /*to fix width of headerMainTitle*/
 }
-.headerMainTitle h2 {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 70px;
-    line-height: 70px;
-} 
+
 .headerMainTitle h3 {
     font-style: normal;
     font-weight: 600;
@@ -184,35 +226,57 @@ nav .phone {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 68px 0 158px 0;
+    margin: 68px 0 0px 0;
 }
 .headerMainTitle .iconContainer .iconContainerInner {
     display: flex;
     align-items: center;
 }
-.headerMainTitle .icon .fa-solid{
+.headerMainTitle .icon {
     margin-right: 10px;
 }
 .headerMainPics {
     position: relative;
-    display: flex;
+    align-self: flex-end; /*to place on the bottom*/
+    display: grid;
+    grid-template-columns: 20vw 26vw;
+    grid-auto-rows: 140px 323px 140px;
 }
+
+
 .headerMainPics .man {
-    position: absolute;
-    left: 80px;
-    bottom: -4px;
+    background-image: url("../media/mover_man.png");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    grid-column: 1/2;
+    grid-row: 1/4;
+
+    position: relative;
+    bottom: 0px;
     z-index: 10;
 }
 .headerMainPics .car {
-    position: absolute;
-    left: 380px;
-    top: 60px;
+    background-image: url("../media/car.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: auto;
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    position: relative;
+    left: -90px;
+    top: -45px;
     z-index: 0;
 }
-.headerMainPics .phoneImg{
+
+header .phoneImg{
     position: absolute;
-    left: 600px;
-    bottom: 100px;
+    right: 18vw; 
+    top: 70%;
+    z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -224,8 +288,8 @@ nav .phone {
     color: #fff;
     cursor: pointer;
 }
-.headerMainPics .phoneImg::after,
-.headerMainPics .phoneImg::before {
+header .phoneImg::after,
+header .phoneImg::before {
     content: "";
     position: absolute;
     width: 136px;
@@ -234,7 +298,7 @@ nav .phone {
     background-color: rgba(61, 155, 233, 0.3);
     animation: pulse 1.5s linear infinite;
 }
-.headerMainPics .phoneImg::after {
+header .phoneImg::after {
     animation-delay: 0.5s;
 }
 @keyframes pulse {
@@ -251,11 +315,93 @@ nav .phone {
     }
   }
 
+
+
+@media(max-width: 1500px) {
+    .headerMainTitle {
+        margin-bottom: 50px;
+    }
+   .headerMainTitle .title h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .headerMainTitle .iconContainer {
+        flex-wrap: wrap;
+    }
+    
+    .headerMainPics {
+        grid-template-rows: 90px 248px 90px;
+    }
+}
+@media(max-width: 1400px) {
+    nav .phone {
+        grid-row: 2/3;
+        justify-self: flex-start;
+        white-space: nowrap;
+    }
+    
+    .headerMainPics {
+        grid-template-rows: 100px 248px 100px;
+    }
+
+} 
+@media(max-width: 1200px) {
+    .headerMainPics .man, .headerMainPics .car {
+        display: none;
+    }
+    .headerMain {
+        justify-content: center;
+    }
+    .headerMain .headerMainPics {
+        display: none;
+    }
+    header .phoneImg {
+        top: 40%;
+    }
+}
+
+@media (max-width: 992px) {
+    nav ul {
+        position: absolute;
+        top: -100vh;
+        right: 10px;
+        padding: 10px;
+        z-index: 10;
+        transition: all 0.5s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    nav .menuBtn{
+            display: block;
+            grid-column: 3/4;
+            justify-self: flex-end;
+        }
+}
+
+@media (max-width: 576px) {
+    .headerMainTitle .title h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .headerMain .headerMainTitle .button {
+        margin: 0 auto;
+    }
+    .headerMain .headerMainTitle .button::before{
+        content: none;
+    }
+    .headerMain .headerMainTitle .iconContainer {
+        display: none;
+    }
+    header .phoneImg {
+        display: none;
+    }
+}
+
 main {
     width: 100%;
 }
-
-
 /*---- howItWorks ----*/
 .stepCards {
     width: 57vw;
@@ -296,27 +442,11 @@ main {
     line-height: 21px;
 }
 
-@media (max-width: 768px) {
-    .stepPosition {
-        left: -10px;
-    }
-    .stepPosition img {
-        transform: scale(0.7);
-    }
-    .stepTitle {
-        font-size: 18px;
-    }
-    .stepDescr {
-        font-size: 14px;
-        line-height: 21px;
-    }
-    
-}
 
 @media (max-width: 992px) {
     .stepCards {
         position: relative;
-        left: 50px;
+        /* left: 50px; */
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -348,6 +478,8 @@ main {
     }
     .sliderMarkers {
         display: flex;
+        position: relative;
+        top: 70px;
     }
     .sliderMarkers > div {
         width: 15px;
@@ -358,6 +490,22 @@ main {
         transition: background-color 0.5s ease;
 
     }
+}
+@media (max-width: 768px) {
+    .stepPosition {
+        left: -10px;
+    }
+    .stepPosition img {
+        transform: scale(0.7);
+    }
+    .stepTitle {
+        font-size: 18px;
+    }
+    .stepDescr {
+        font-size: 14px;
+        line-height: 21px;
+    }
+    
 }
 
 
@@ -513,8 +661,8 @@ main {
 
 /*----- order -----*/
 .order {
+    padding-left: 23.8vw;
     align-items: flex-start;
-    width: auto;
 }
 .order form {
     display: flex;
@@ -567,12 +715,6 @@ main {
     font-weight: 700;
     color: #333;
   }
-/*.order form input::placeholder {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: rgba(51, 51, 51, 0.7);
-}*/
 .order form .callMeButton {
     width: 250px;
     height: 50px;
@@ -621,18 +763,78 @@ main {
     width: 15px;
     height: 15px;
 }
-/*----- address -----*/
 
+@media(max-width: 576px) {
+    .order {
+    padding-left: 10vw;
+    }
+    .order form .input {
+        width: 250px;
+        margin-right: 0;
+    }
+}
+
+/*----- address -----*/
+address {
+    position: relative;
+}
 address .location {
     width: 100%;
-    /*height: 30vh;*/
     text-align: center;
 }
 iframe {
     width: 100%;
     height: 60vh;
 }
+address .mapCard {
+    width: 368px;
+    height: 326px;
+    background-color: #fff;
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    position: absolute;
+    top: 25%;
+    left: 20%;
+}
+address .mapCard .mapInfo {
+    margin: 40px 0;
+}
+address .mapCard .mapInfo p:nth-child(2) {
+    margin: 20px 0;
+}
+address .mapCard .mapInfo p span {
+    color: #FED100;
+    margin-right: 15px;
+}
+address .mapCard .mapInfo p:last-child {
+    position: relative;
+}
+address .mapCard .mapInfo p:last-child::after{
+    content: "________________";
+    color: #333333;
+    position: absolute;
+    bottom: -4px;
+    left: 32px;
+}
+address .mapCard .social {
+    align-self: flex-end;
+    display: flex;
+}
+address .mapCard .social p:nth-child(-n+3) {
+    margin-right: 25px;
 
+}
+address .mapCard .social p .fa-brands{
+    width: 18px;
+    height: 18px;
+}
+@media(max-width: 992px) {
+    address .mapCard {
+        display: none;
+    }
+}
 /*----- footer -----*/
 footer {
     padding: 104px 0 102px;

@@ -27,13 +27,14 @@
                 <li>Отзывы</li>
                 <li>Контакты</li>
             </ul>
+            <button class="menuBtn"><i class="fa-solid fa-bars"></i></button>
             <p class="phone">8(800)-080-12-13</p>
         </nav>
         <div class="headerMain">
             <div class="headerMainTitle">
                 <div class="title">
-                    <h1>Квартирные</h1>
-                    <h2>переезды </h2>
+                    <h1><span>Квартирные</span></h1>
+                    <h1>переезды </h1>
                     <h3>По Москве и области</h3>
                 </div>
                 <div class="button"><button>Заказать</button></div>
@@ -55,11 +56,13 @@
                 </div>
             </div>
             <div class="headerMainPics">
-                <div class="man"><img src="media/mover_man.png" alt="mover"/></div>
-                <div class="car"><img src="media/car.png" alt="car"/></div>
-                <div class="phoneImg"><i class="fa-solid fa-phone"></i></div>
+                <div class="man"></div><!--<img src="media/mover_man.png" alt="mover"/>-->
+                <div class="car"></div><!--<img src="media/car.png" alt="car"/>-->
             </div>
+
         </div>
+        <div class="phoneImg"><i class="fa-solid fa-phone"></i></div>
+
     </header>
 
     <main>
@@ -205,10 +208,12 @@
             <div class="dotContainer"></div>
         </section>
 
-        <div class="sectionWrap">
-            <section class="order">
-                    <h3 class="sectionTitle">Закажи  переезд прямо сейчас</h3>
-                    <p class="itemInfo">Мы перезвоним в течении 10 секунд</p>
+        <section class="order">
+            <h3 class="sectionTitle">Закажи  переезд прямо сейчас</h3>
+            <p class="itemInfo">Мы перезвоним в течении 10 секунд</p>
+
+            <div class="sectionWrap">
+            
                     <form id="callOrder">
                         <label class="inputField">
                             <input type="text"  placeholder="&nbsp;" class="input"/>
@@ -226,11 +231,27 @@
                         </div>
                     </form>
                     
-            </section>
-        </div>
+            
+                </div>
+        </section>
     </main>
     <address class="location  scrollToSection">
         <iframe seamless src="https://yandex.ru/map-widget/v1/?um=constructor%3A21926387e9f6537b38b4fdd60cfe7d550ea86abf584550390fccc0babf403f82&amp;source=constructor" frameborder="0"></iframe>
+        <div class="mapCard">
+            <p class="logo">MOVEE</p>
+            <div class="mapInfo">
+                <p class="itemInfo"><span><i class="fa-solid fa-check"></i></span>Москва, Волгоградский пр-т, 38</p>
+                <p class="itemInfo"><span><i class="fa-solid fa-check"></i></span>8 (800)-080-12-13</p>
+                <p class="itemInfo"><span><i class="fa-solid fa-check"></i></span>hello@movee.ru</p>
+            </div>
+            <div class="social">
+                <p><i class="fa-brands fa-youtube"></i></p>
+                <p><i class="fa-brands fa-vk"></i></p>
+                <p><i class="fa-brands fa-square-facebook"></i></p>
+                <p><i class="fa-brands fa-instagram"></i></p>
+            </div>
+
+        </div>
     </address>
 
 

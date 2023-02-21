@@ -16,6 +16,11 @@ const params = {
   spaceBetween: 25,
   breakpoints: {
     // when window width is >= 320px
+    200: {
+      slidesPerView: 1,
+      spaceBetween: 5
+
+    },
     320: {
       slidesPerView: 1,
       spaceBetween: 25

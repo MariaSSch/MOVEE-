@@ -7,7 +7,26 @@ navArr.forEach((elem, index) => {
         sectionArr[index].scrollIntoView({behavior: "smooth"});
     })
 });
+//menu-bar
+const menuBtn = document.querySelector(".menuBtn");
+const menuElem = document.querySelector("nav ul");
 
+menuBtn.addEventListener("click", () => {
+    menuElem.classList.toggle("menuOn");
+});
+
+const menuItems = [...document.querySelectorAll("nav ul li")];
+menuItems.forEach(item => item.addEventListener("click", () => {
+    menuElem.classList.remove("menuOn")
+})
+);
+
+window.addEventListener("resize", e => {
+    if (document.documentElement.clientWidth > 992) {
+        menuElem.classList.remove("menuOn");
+
+    }
+});
 //tab trucks
 const btnSet = document.querySelector(".buttonSet");
 const trucksArr = document.querySelectorAll(".truck");
