@@ -1,3 +1,13 @@
+//scroll to section
+//scroll to section from accent button
+//menu-bar
+//tab trucks
+//trucks imgs
+//feedback - сборка раздела
+//form "order a callback"
+
+
+
 // scroll to section
 const navArr = document.querySelectorAll("nav li");
 const sectionArr = document.querySelectorAll(".scrollToSection");
@@ -7,6 +17,14 @@ navArr.forEach((elem, index) => {
         sectionArr[index].scrollIntoView({behavior: "smooth"});
     })
 });
+//scroll to section from accent button
+const accentBtn = document.querySelectorAll(".accentButton, .headerMainTitle button");
+const toOrder = document.querySelector(".order");
+accentBtn.forEach(elem => {
+    elem.addEventListener("click", () => toOrder.scrollIntoView({behavior: "smooth"}))
+})
+
+
 //menu-bar
 const menuBtn = document.querySelector(".menuBtn");
 const menuElem = document.querySelector("nav ul");
@@ -43,6 +61,7 @@ btnSet.addEventListener("click", (event) => {
 
         trucksArr.item(activeBtnIndex).classList.add("truckInfo");
 })
+
 //trucks img
 
 const truckImgArr = ["gazel.png", "largus.png", "scania.png"];
@@ -115,5 +134,17 @@ feedbackSet.append(...feedbackArr.map((item) => {
 })
 )
 
-//howItWorks slider
+//form "order a callback"
+const orderForm = document.querySelector("#callOrder");
+
+orderForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = e.target.yourname.value;
+    const phone = e.target.yournumber.value;
+    const order = {
+        name,
+        phone
+    }
+    console.log(order);
+})
 

@@ -28,7 +28,7 @@
                 <li>Контакты</li>
             </ul>
             <button class="menuBtn"><i class="fa-solid fa-bars"></i></button>
-            <p class="phone">8(800)-080-12-13</p>
+            <p class="phone"><a href="tel: +78000801213">8(800)-080-12-13</a></p>
         </nav>
         <div class="headerMain">
             <div class="headerMainTitle">
@@ -38,8 +38,8 @@
                     <h3>По Москве и области</h3>
                 </div>
                 <div class="button"><button>Заказать</button></div>
-                <div class="iconContainer"><!--flex-->
-                   <div  class="iconContainerInner"><!--flex-->
+                <div class="iconContainer">
+                   <div  class="iconContainerInner">
                         <p class="icon"><i class="fa-solid fa-truck fa-2x"></i></p>
                         <p class="iconDescr">Более 800</br> переездов</p>
                     </div>
@@ -56,19 +56,19 @@
                 </div>
             </div>
             <div class="headerMainPics">
-                <div class="man"></div><!--<img src="media/mover_man.png" alt="mover"/>-->
-                <div class="car"></div><!--<img src="media/car.png" alt="car"/>-->
+                <div class="man"></div>
+                <div class="car"></div>
             </div>
 
         </div>
-        <div class="phoneImg"><i class="fa-solid fa-phone"></i></div>
+        <div><a href="tel: +78000801213"  class="phoneImg"><i class="fa-solid fa-phone"></i></a></div>
 
     </header>
 
     <main>
         <section class="howItWork">
             <h3 class="sectionTitle">Как это происходит?</h3>
-            <div class="sectionWrap"> <!--возможно удалить, если дублирует .stepGrid и больше нигде не исп-ся-->
+            <div class="sectionWrap"> 
                 <div class="stepCards">
 
                     <div class="stepItem">
@@ -121,9 +121,9 @@
         <section class="priceBlock scrollToSection">
             <h3 class="sectionTitle">Цены </h3>
             <h3 class="sectionSubTitle">Фиксированная стоимость на переезд под ключ</h3>
-            <div class="sectionWrap swiper priceSwiper"><!--sectionWrap-->
-                <div class="swiper-wrapper priceCards"><!---->
-                    <div class="card swiper-slide"><!---->
+            <div class="sectionWrap swiper priceSwiper">
+                <div class="swiper-wrapper priceCards">
+                    <div class="card swiper-slide">
                         <p class="itemTitle">1-комнатная кв-ра</p>
                         <p class="itemInfo">1 фургон</p>
                         <p class="itemInfo">2 грузчика</p>
@@ -132,7 +132,7 @@
                         <button class="accentButton">Заказать</button>
                     </div>
 
-                    <div class="swiper-slide card"><!---->
+                    <div class="swiper-slide card">
                         <p class="itemTitle">2-комнатная кв-ра</p>
                         <p class="itemInfo">1 газель - 3 метра</p>
                         <p class="itemInfo">2 грузчика</p>
@@ -140,7 +140,7 @@
                         <p class="cardPrice">10 990₽</p>
                         <button class="accentButton">Заказать</button>
                     </div>
-                    <div class="card swiper-slide"><!---->
+                    <div class="card swiper-slide">
                         <p class="itemTitle">3-комнатная кв-ра</p>
                         <p class="itemInfo">1 газель - 4 метра</p>
                         <p class="itemInfo">2 грузчика</p>
@@ -170,7 +170,7 @@
                             <p class="itemInfo"><i class="fa-solid fa-check"></i>Грузоподъемность 1,5 т</p>
                             <button  class="accentButton">Заказать</button>
                         </div>
-                        <div class="truckImg expert"></div> <!--<img src="media/gazel_yellow.png" alt="gaz">-->
+                        <div class="truckImg expert"></div> 
                     </div>
                     <div class="truck invisible">
                         <div class="truckDescr">
@@ -181,7 +181,7 @@
                             <p class="itemInfo"><i class="fa-solid fa-check"></i>Грузоподъемность 750 кг</p>
                             <button  class="accentButton">Заказать</button>
                         </div>
-                        <div class="truckImg"></div><!--<img src="media/largus.png" alt="gaz" style="margin: 13px 0">-->
+                        <div class="truckImg"></div>
                     </div>
                     <div class="truck invisible">
                         <div class="truckDescr">
@@ -192,7 +192,7 @@
                             <p class="itemInfo"><i class="fa-solid fa-check"></i>Грузоподъемность 10 т</p>
                             <button  class="accentButton">Заказать</button>
                         </div>
-                        <div class="truckImg"></div><!--<img src="media/scania.png" alt="gaz">-->
+                        <div class="truckImg"></div>
                     </div>
                 </div>
             </div>
@@ -201,7 +201,7 @@
         <section class="feedback  scrollToSection">
             <h3 class="sectionTitle">Отзывы</h3>
             <div class="sectionWrap swiper feedbackSwiper">
-                <div class="swiper-wrapper feedbackSet"> <!-- slider-wrap-->
+                <div class="swiper-wrapper feedbackSet"> 
                 </div>
             </div>
             <button>Все отзывы</button>
@@ -210,22 +210,22 @@
 
         <section class="order">
             <h3 class="sectionTitle">Закажи  переезд прямо сейчас</h3>
-            <p class="itemInfo">Мы перезвоним в течении 10 секунд</p>
+            <p class="itemInfo">Мы перезвоним в течение 10 секунд</p>
 
             <div class="sectionWrap">
             
-                    <form id="callOrder">
+                    <form id="callOrder" action="#">
                         <label class="inputField">
-                            <input type="text"  placeholder="&nbsp;" class="input"/>
+                            <input type="text"  placeholder="&nbsp;" class="input" name="yourname" form="callOrder"/>
                             <span class="inputPlaceholder">Ваше имя</span>
                         </label>
                         <label class="inputField">
-                            <input type="tel"  placeholder="&nbsp;" class="input"/>
+                            <input type="tel"  placeholder="&nbsp;" class="input" name="yournumber" form="callOrder" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$"/>
                             <span class="inputPlaceholder">Телефон</span>
                         </label> 
                         <div>
                             <label >
-                                <input type="button" value="Перезвонить мне" class="callMeButton">
+                                <input type="submit" value="Перезвонить мне" class="callMeButton">
                             </label>
                             <label class="agreement"><input type="checkbox" data-checked="&#10004;" checked/>Даю согласие на обработку данных</label>
                         </div>
@@ -241,14 +241,14 @@
             <p class="logo">MOVEE</p>
             <div class="mapInfo">
                 <p class="itemInfo"><span><i class="fa-solid fa-check"></i></span>Москва, Волгоградский пр-т, 38</p>
-                <p class="itemInfo"><span><i class="fa-solid fa-check"></i></span>8 (800)-080-12-13</p>
-                <p class="itemInfo"><span><i class="fa-solid fa-check"></i></span>hello@movee.ru</p>
+                <p class="itemInfo"><span><i class="fa-solid fa-check"></i></span><a href="tel: +78000801213">8 (800)-080-12-13</a></p>
+                <p class="itemInfo"><span><i class="fa-solid fa-check"></i></span><a href="mailto: hello@movee.ru">hello@movee.ru</a></p>
             </div>
             <div class="social">
-                <p><i class="fa-brands fa-youtube"></i></p>
-                <p><i class="fa-brands fa-vk"></i></p>
-                <p><i class="fa-brands fa-square-facebook"></i></p>
-                <p><i class="fa-brands fa-instagram"></i></p>
+                <p><a href="www.youtube.com"><i class="fa-brands fa-youtube"></i></a></p>
+                <p><a href="www.vk.com"><i class="fa-brands fa-vk"></i></a></p>
+                <p><a href="www.facebook.com"><i class="fa-brands fa-square-facebook"></i></a></p>
+                <p><a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a></p>
             </div>
 
         </div>
@@ -273,16 +273,16 @@
             </div>
             <div class="footerSocial">
                 <p>
-                    <span><i class="fa-brands fa-youtube"></i></span>
-                    <span><i class="fa-brands fa-vk"></i></span>
-                    <span><i class="fa-brands fa-square-facebook"></i></span>
-                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><a href="www.youtube.com"><i class="fa-brands fa-youtube"></i></a></span>
+                    <span><a href="www.vkcom"><i class="fa-brands fa-vk"></i></a></span>
+                    <span><a href="www.facebook.com"><i class="fa-brands fa-square-facebook"></i></a></span>
+                    <span><a href="wwwinstagram.com"><i class="fa-brands fa-instagram"></i></a></span>
                 </p>
-                <p class="footerText">hello@movee.ru</p>
+                <p><a  class="footerText" href="mailto:hello@movee.ru">hello@movee.ru</a></p>
             </div>
             <div class="footerPhoneback">
                 <button class="footerText">Обратный звонок</button>
-                <p class="footerText">8 (800)-080-12-13</p>
+                <a class="footerText" href="tel: +78000801213">8 (800)-080-12-13</a>
             </div>
         </div>
     </footer>

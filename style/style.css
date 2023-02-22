@@ -1,6 +1,30 @@
+/* section paddings */
+/* section description и общие классы */
+    /* media-768 for section titles*/
+/* header */
+    /* nav */
+    /* headerMain */
+    /* media -1500 -1400 -1200 -992 -576 */
+/* main */
+    /* how It Works */
+        /* media -992 -768 */
+    /* priceBlock */
+    /* truck fleet */
+        /* media -992 -768 */
+    /* feedback */
+        /* media -1400 */
+    /* order */
+        /* media -576*/
+    /* address */
+        /* media -992 */
+/* footer */
+
+
+
+
+
 * {
     font-family: 'Montserrat', sans-serif;
-    /*font-family: 'Roboto', sans-serif;*/
     margin: 0;
     padding: 0;
     text-decoration: none;
@@ -9,10 +33,6 @@
 
 }
 body {
-    /*width: 100%;*/
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
     color: #333333;
 }
  
@@ -49,7 +69,6 @@ section, .section {
     font-weight: 600;
     font-size: 30px;
     line-height: 37px;
-    /*margin-top: 45px;*/
 }
 .sectionSubTitle, .itemTitle {
     font-style: normal;
@@ -66,7 +85,6 @@ section, .section {
     .sectionSubTitle, .itemTitle {
         font-size: 18px;
     }
-    
 }
 .sectionWrap {
     display: flex;
@@ -92,7 +110,8 @@ button.accentButton {
     cursor: pointer;
 }
 a {
-    color: #333
+    color: #333;
+    cursor: pointer;
 }
 
 /*---- header -----*/
@@ -100,7 +119,6 @@ a {
 header {
     background-color: #FED100;
     padding: 70px 10.5vw 0 15.4vw;
-    /* padding: 70px 0 0 0; */
     position: relative; /*for phoneImg*/
 
 }
@@ -109,11 +127,6 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 10.5vw 0 15.4vw; */
 }
 .logo {
     font-style: normal;
@@ -150,6 +163,7 @@ nav .menuBtn {
     border: none;
     cursor: pointer;
     display: none;
+    z-index: 100;
 }
 
 nav .menuOn {
@@ -272,7 +286,7 @@ nav .menuOn li {
     z-index: 0;
 }
 
-header .phoneImg{
+header .phoneImg {
     position: absolute;
     right: 18vw; 
     top: 70%;
@@ -808,15 +822,17 @@ address .mapCard .mapInfo p span {
     color: #FED100;
     margin-right: 15px;
 }
-address .mapCard .mapInfo p:last-child {
+address .mapCard .mapInfo p:last-child a {
     position: relative;
 }
-address .mapCard .mapInfo p:last-child::after{
-    content: "________________";
-    color: #333333;
+address .mapCard .mapInfo p:last-child a::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #333333;
     position: absolute;
-    bottom: -4px;
-    left: 32px;
+    bottom: 0;
+    left: 0px;
 }
 address .mapCard .social {
     align-self: flex-end;
@@ -850,7 +866,6 @@ footer {
 .footerWrap {
     width: 100%;
     display: grid;
-    /*grid-template-columns: 238px 145px 166px 250px;*/
     grid-template-columns: repeat(auto-fit, minmax(145px, 250px));
     grid-column-gap: 169px;
     grid-row-gap: 20px;
@@ -874,16 +889,18 @@ footer {
     margin-right: 27px;
  
 }
-.footerSocial p:last-child {
+.footerSocial p:last-child a {
     position: relative;
     margin-top: 20px;
 }
-.footerSocial p:last-child::after{
-    content: "_________________";
-    color: #333333;
+.footerSocial p:last-child a::after{
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: #333333;
     position: absolute;
-    bottom: -5px;
-    left: 0;
+    bottom: 0;
+    left: 0px;
 }
 .footerPhoneback {
     text-align: center;
@@ -894,16 +911,16 @@ footer {
     background-color: #FED100;
     border: 1px solid #333333;
 }
-.footerPhoneback p {
+.footerPhoneback a {
     margin-top: 5px;
     position: relative;
 }
-.footerPhoneback p::after {
+.footerPhoneback a::after {
     content: "";
     height: 1px;
-    width: 68%;
+    width: 100%;
     background-color: #333333;
     position: absolute;
     bottom: 0;
-    left: 40px;
+    left: 0px;
 }
