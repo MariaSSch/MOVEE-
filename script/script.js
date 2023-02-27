@@ -105,7 +105,7 @@ const feedbackSet = document.querySelector(".feedback__feedback-set");
 feedbackSet.append(...feedbackArr.map((item) => {
     const feedbackItem = document.createElement("div");
     feedbackItem.classList.add("feedback__feedback-item");
-    //feedbackItem.classList.add("swiper-slide");
+    feedbackItem.classList.add("swiper-slide");
 
     const itemTitle = document.createElement("p");
     itemTitle.classList.add("item-title");
@@ -135,7 +135,8 @@ feedbackSet.append(...feedbackArr.map((item) => {
 )
 
 //form "order a callback"
-const orderForm = document.querySelector("#callOrder");
+const orderForm = document.querySelector("#call-order");
+const checkElem = document.querySelector(".order__agreement input");
 
 orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -145,6 +146,7 @@ orderForm.addEventListener("submit", (e) => {
         name,
         phone
     }
-    console.log(order);
+    if (checkElem.checked) console.log(order);
 })
 
+//

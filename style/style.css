@@ -98,6 +98,10 @@ section, .section {
     line-height: 21px;
     margin: 13px 0;
 }
+button {
+    cursor: pointer;
+
+}
 button.accent-button {
     width: 250px;
     height: 51.34px;
@@ -107,10 +111,18 @@ button.accent-button {
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    cursor: pointer;
 }
+button.accent-button:hover {
+   color: #FED100;
+  /* background-color: rgb(20%, 20%, 20%, 0.7);*/
+  background-color: grey;
+}
+
 a {
     color: #333;
+    cursor: pointer;
+}
+input[type="submit"] {
     cursor: pointer;
 }
 
@@ -118,8 +130,12 @@ a {
 
 header {
     background-color: #FED100;
-    padding: 70px 10.5vw 0 15.4vw;
-    position: relative; /*for phoneImg*/
+    background-image: url("../media/headerimg.png");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 70px 10.5vw 158px 15.4vw;
+    /*position: relative; /*for phoneImg*/
 
 }
 
@@ -219,6 +235,13 @@ nav .menuOn li {
     color: #F2F2F2;
     cursor: pointer;
 }
+.header__main-title button:hover {
+    background-color: #F2F2F2;
+    color: #FF352B;
+
+}
+
+
 .header__main-title .header__button {
     position: relative;
     z-index: 1;
@@ -285,12 +308,16 @@ nav .menuOn li {
     top: -45px;
     z-index: 0;
 }
+header .header__phone-img-container {
+    align-self: flex-end;
+    margin-right: 150px;
 
+}
 header .header__phone-img {
-    position: absolute;
+    /*position: absolute;
     right: 18vw; 
     top: 70%;
-    z-index: 100;
+    z-index: 100;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,6 +328,7 @@ header .header__phone-img {
     font-size: 52px;
     color: #fff;
     cursor: pointer;
+    position: relative;
 }
 header .header__phone-img::after,
 header .header__phone-img::before {
@@ -329,8 +357,16 @@ header .header__phone-img::after {
     }
   }
 
-
-
+@media(max-width: 1600px) {
+    header {
+        padding: 70px 10.5vw 50px 15.4vw;
+    }
+    .header__main-title .header__icon-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: min-content;
+    }
+  }
 @media(max-width: 1500px) {
     .header__main-title {
         margin-bottom: 50px;
@@ -339,39 +375,37 @@ header .header__phone-img::after {
         font-size: 60px;
         line-height: 60px;
     }
-    .header__main-title .header__icon-container {
-        flex-wrap: wrap;
-    }
-    
-    .header__main-pics {
-        grid-template-rows: 90px 248px 90px;
-    }
 }
 @media(max-width: 1400px) {
-    nav .header__phone {
+    header .header__phone-img-container {
+        align-self: flex-start;
+        /*margin-right: 150px;*/
+        margin-top: 50px;
+    
+    }
+    
+} 
+@media(max-width: 1200px) {
+        nav .header__phone {
         grid-row: 2/3;
         justify-self: flex-start;
         white-space: nowrap;
     }
+
+        .header__main-title .header__icon-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+    }
     
-    .header__main-pics {
-        grid-template-rows: 100px 248px 100px;
+    header .header__phone-img-container {
+        margin-top: 100px;
+    
     }
 
-} 
-@media(max-width: 1200px) {
-    .header__main-pics .header__man, .header__main-pics .header__car {
-        display: none;
-    }
-    .header__main {
+   /* .header__main {
         justify-content: center;
-    }
-    .header__main .header__main-pics {
-        display: none;
-    }
-    header .header__phone-img {
-        top: 40%;
-    }
+    }*/
 }
 
 @media (max-width: 992px) {
@@ -393,8 +427,16 @@ header .header__phone-img::after {
             justify-self: flex-end;
         }
 }
+@media (max-width: 768px) {
+    header .header__phone-img {
+        display: none;
+    }
 
+}
 @media (max-width: 576px) {
+    header {
+        background-image: none;
+    }
     .header__main-title .header__title h1 {
         font-size: 30px;
         line-height: 30px;
@@ -406,9 +448,6 @@ header .header__phone-img::after {
         content: none;
     }
     .header__main .header__main-title .header__icon-container {
-        display: none;
-    }
-    header .header__phone-img {
         display: none;
     }
 }
@@ -608,13 +647,33 @@ main {
 }
 @media(max-width: 768px) {
     .tf__button-set {
-        display: grid;
-        grid-template-columns: 201px;
-        grid-template-rows: repeat(3, auto);
-        grid-gap: 19px;
-        margin-bottom: 47px;
+        grid-template-columns: repeat(3, auto);
     }
-    
+    .tf__button-set button {
+        border: none;
+        width: auto;
+        height: auto;
+        position: relative;
+    }
+    .tf__button-set button:hover {
+        border: none;
+
+    }
+    .tf__button-set button::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: #FED100;
+        bottom: 0;
+        left: 50%;
+        transition: width 0.5s ease, left 0.5s ease;
+    }
+    .tf__button-set button:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
 }
 
 
@@ -685,9 +744,9 @@ main {
 .main__order form .order__input-field {
     position: relative;
 }
-.main__order form .order__input-field .order__input-placeholder {
+.main__order form .order__input-field span {
     position: absolute;
-    bottom: 40px;
+    bottom: 10px;/*40*/
     left: 0;
     font-weight: 500;
     font-size: 20px;
@@ -711,20 +770,26 @@ main {
     transition: all 0.2s ease;
 }
 .main__order form .order__input:hover {
-    background-color: rgba(0, 0, 0, 0.04);;
+    background-color: rgba(0, 0, 0, 0.04);
+    
 }
 .main__order form .order__input:focus {
-    background-color: #FED100;
+   /* background-color: #FED100;*/
+    border-bottom: 2px solid #FED100;
+    background-color: transparent;
+
 }
-.main__order form .order__input:focus + .order__input-placeholder {
+.main__order form .order__input:focus + span {
     transform: translate(-20px, -25px) scale(0.5);
     font-weight: 700;
     color: #333;
 }
 .main__order form .order__input:not(:placeholder-shown) {
-    background-color: #FED100;
+   /* background-color: #FED100;*/
+   border-bottom: 2px solid #FED100;
+
 }
-.main__order form .order__input:not(:placeholder-shown) + .order__input-placeholder {
+.main__order form .order__input:not(:placeholder-shown) + span {
     transform: translate(-20px, -25px) scale(0.5);
     font-weight: 700;
     color: #333;
@@ -741,9 +806,10 @@ main {
     outline: none;
     position: relative;
     margin: 22px 0;
-
 }
-
+.main__order form .order__call-me-button:hover {
+    box-shadow: 0 0 10px #FED100;
+}
 .main__order form .order__call-me-button:active {
     transform: translate(10px, 10px);
     border: 1px solid #FED100;
@@ -777,6 +843,16 @@ main {
     width: 15px;
     height: 15px;
 }
+.main__order form .order__agreement input:not(:checked)::before {
+    content: attr(data-checked);
+    position: absolute;
+    bottom: -75px;
+    left: 10px;
+    width: 250px;
+    border: 1px solid #000;
+    border-radius: 0px 10px 10px 10px;
+    padding: 5px;
+}
 
 @media(max-width: 576px) {
     .main__order {
@@ -799,6 +875,7 @@ address .address__location {
 iframe {
     width: 100%;
     height: 60vh;
+    pointer-events: none;
 }
 address .address__map-card {
     width: 368px;
