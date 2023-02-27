@@ -10,7 +10,7 @@
 
 // scroll to section
 const navArr = document.querySelectorAll("nav li");
-const sectionArr = document.querySelectorAll(".scrollToSection");
+const sectionArr = document.querySelectorAll(".scroll-to-section");
 
 navArr.forEach((elem, index) => { 
     elem.addEventListener("click", () => {
@@ -18,15 +18,15 @@ navArr.forEach((elem, index) => {
     })
 });
 //scroll to section from accent button
-const accentBtn = document.querySelectorAll(".accentButton, .headerMainTitle button");
-const toOrder = document.querySelector(".order");
+const accentBtn = document.querySelectorAll(".accent-button, .header__main-title button");
+const toOrder = document.querySelector(".main__order");
 accentBtn.forEach(elem => {
     elem.addEventListener("click", () => toOrder.scrollIntoView({behavior: "smooth"}))
 })
 
 
 //menu-bar
-const menuBtn = document.querySelector(".menuBtn");
+const menuBtn = document.querySelector(".header__menu-btn");
 const menuElem = document.querySelector("nav ul");
 
 menuBtn.addEventListener("click", () => {
@@ -46,8 +46,8 @@ window.addEventListener("resize", e => {
     }
 });
 //tab trucks
-const btnSet = document.querySelector(".buttonSet");
-const trucksArr = document.querySelectorAll(".truck");
+const btnSet = document.querySelector(".tf__button-set");
+const trucksArr = document.querySelectorAll(".tf__truck");
 
 btnSet.addEventListener("click", (event) => {
     let activeBtn = event.target;
@@ -55,17 +55,17 @@ btnSet.addEventListener("click", (event) => {
     let activeBtnIndex = [...activeBtn.parentNode.children].indexOf(activeBtn);
         
         trucksArr.forEach((truck) => {
-            truck.classList.remove("truckInfo");
+            truck.classList.remove("tf__truck-info");
             truck.classList.add("invisible");
         });
 
-        trucksArr.item(activeBtnIndex).classList.add("truckInfo");
+        trucksArr.item(activeBtnIndex).classList.add("tf__truck-info");
 })
 
 //trucks img
 
 const truckImgArr = ["gazel.png", "largus.png", "scania.png"];
-const truckImgElems = document.querySelectorAll(".truckImg");
+const truckImgElems = document.querySelectorAll(".tf__truck-img");
 const mediaPath = "media/"
 
 truckImgArr.map((img, index) => {
@@ -100,19 +100,19 @@ const feedbackArr = [
     },
 ]
 
-const feedbackSet = document.querySelector(".feedbackSet");
+const feedbackSet = document.querySelector(".feedback__feedback-set");
 
 feedbackSet.append(...feedbackArr.map((item) => {
     const feedbackItem = document.createElement("div");
-    feedbackItem.classList.add("feedbackItem");
-    feedbackItem.classList.add("swiper-slide");
+    feedbackItem.classList.add("feedback__feedback-item");
+    //feedbackItem.classList.add("swiper-slide");
 
     const itemTitle = document.createElement("p");
-    itemTitle.classList.add("itemTitle");
+    itemTitle.classList.add("item-title");
     itemTitle.innerText = item.name;
 
     const itemDate = document.createElement("p");
-    itemDate.classList.add("itemInfo");
+    itemDate.classList.add("item-info");
     itemDate.innerText = item.date;
 
     const spanStar = document.createElement("span");
@@ -120,11 +120,11 @@ feedbackSet.append(...feedbackArr.map((item) => {
             spanStar.innerHTML +='<i class="fa-solid fa-star"></i>'
         }
     const itemMessage = document.createElement("p");
-    itemMessage.classList.add("itemInfo");
+    itemMessage.classList.add("item-info");
     itemMessage.innerText = item.message;
 
     const readMore = document.createElement("a");
-    readMore.classList.add("itemInfo");
+    readMore.classList.add("item-info");
     readMore.innerText = "Читать полностью";
 
     itemDate.appendChild(spanStar);

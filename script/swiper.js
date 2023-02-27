@@ -40,6 +40,6 @@ const params = {
   }
 }
 
-let swiperPriceBlock = new Swiper('.priceSwiper', params); //autoplay и loop работают постоянно
-let swiperPriceFeedback = new Swiper('.feedbackSwiper', params);//autoplay и loop не работают вообще
+let swiperPriceBlock = new Swiper('.pb__price-swiper', params); //autoplay и loop работают постоянно
+let swiperPriceFeedback = new Swiper('.feedback__feedback-swiper', params);//autoplay и loop не работают вообще
 

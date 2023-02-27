@@ -1,8 +1,8 @@
-const slides = document.querySelectorAll(".stepItem");
-const markers = document.querySelectorAll(".sliderMarkers div");
+const slides = document.querySelectorAll(".hiw__step-item");
+const markers = document.querySelectorAll(".hiw__slider-markers div");
 
-const leftTrigger = document.querySelector(".leftTrigger");
-const rightTrigger = document.querySelector(".rightTrigger");
+const leftTrigger = document.querySelector(".hit__left-trigger");
+const rightTrigger = document.querySelector(".hiw__right-trigger");
 
 let slideIndex = 1;
 

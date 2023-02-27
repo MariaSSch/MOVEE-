@@ -37,19 +37,19 @@ body {
 }
  
 /*----- section paddings -----*/
-.howItWork {
+.main__how-it-work {
     padding: 47px 0 61px;
 }
-.priceBlock {
+.main__price-block {
     padding: 43px 0 83px;
 }
-.truckFleet {
+.main__truck-fleet {
     padding: 71px 0 63px;
 }
-.feedback {
+.main__feedback {
     padding: 83px 0 111px;
 }
-.order {
+.main__order {
     padding: 107px 0 123px;
 }
 footer {
@@ -64,13 +64,13 @@ section, .section {
     align-items: center;
     width: 100%;
 }
-.sectionTitle {
+.section-title {
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
     line-height: 37px;
 }
-.sectionSubTitle, .itemTitle {
+.section-subtitle .item-title {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -79,26 +79,26 @@ section, .section {
     text-align: center;
 }
 @media (max-width: 768px) {
-    .sectionTitle {
+    .section-title {
         font-size: 24px;
     }
-    .sectionSubTitle, .itemTitle {
+    .section-subtitle, .item-title {
         font-size: 18px;
     }
 }
-.sectionWrap {
+.section-wrap {
     display: flex;
     justify-content: center;
     margin-top: 60px;
 }
-.itemInfo, .iconDescr {
+.item-info, .icon-descr {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px;
     margin: 13px 0;
 }
-button.accentButton {
+button.accent-button {
     width: 250px;
     height: 51.34px;
     border: none;
@@ -148,7 +148,7 @@ nav ul li {
     cursor: pointer;
     z-index: 100;
 }
-nav .phone {
+nav .header__phone {
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
@@ -157,7 +157,7 @@ nav .phone {
     justify-self: flex-end;
 }
 
-nav .menuBtn {
+nav .header__menu-btn {
     font-size: 30px;
     background-color: transparent;
     border: none;
@@ -175,39 +175,39 @@ nav .menuOn li {
 }
 
 
-.headerMain {
+.header__main {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.headerMainTitle {
+.header__main-title {
     margin-right: 4.15vw; /*80px*/
     align-self: flex-start;
 }
-.headerMainTitle .title {
+.header__main-title .header__title {
     margin: 56px 0 44px 0;
 }
-.headerMainTitle h1 {
+.header__main-title h1 {
     font-style: normal;
     font-weight: 700;
     font-size: 70px;
     line-height: 70px;
 } 
-.headerMainTitle h1 span {
+.header__main-title h1 span {
     -webkit-text-stroke: 0.1px #000;
     -webkit-text-fill-color: #333;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     margin-right: 94px; /*to fix width of headerMainTitle*/
 }
 
-.headerMainTitle h3 {
+.header__main-title h3 {
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
     line-height: 37px;
 }
-.headerMainTitle button {
+.header__main-title button {
     width: 304px;
     height: 53.55px;
     background-color: #FF352B;
@@ -219,11 +219,11 @@ nav .menuOn li {
     color: #F2F2F2;
     cursor: pointer;
 }
-.headerMainTitle .button {
+.header__main-title .header__button {
     position: relative;
     z-index: 1;
 }
-.headerMainTitle .button::before {
+.header__main-title .header__button::before {
     content: "";
     width: 304px;
     height: 53.55px;
@@ -233,23 +233,23 @@ nav .menuOn li {
     bottom: -10px;
     z-index: -1;
 }
-.headerMainTitle button:active {
+.header__main-title button:active {
     transform: translate(10px, 10px);
 }
-.headerMainTitle .iconContainer {
+.header__main-title .header__icon-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 68px 0 0px 0;
 }
-.headerMainTitle .iconContainer .iconContainerInner {
+.header__main-title .header__icon-container .header__icon-container-inner {
     display: flex;
     align-items: center;
 }
-.headerMainTitle .icon {
+.header__main-title .header__icon {
     margin-right: 10px;
 }
-.headerMainPics {
+.header__main-pics {
     position: relative;
     align-self: flex-end; /*to place on the bottom*/
     display: grid;
@@ -258,7 +258,7 @@ nav .menuOn li {
 }
 
 
-.headerMainPics .man {
+.header__main-pics .header__man {
     background-image: url("../media/mover_man.png");
     background-position: bottom;
     background-size: contain;
@@ -271,7 +271,7 @@ nav .menuOn li {
     bottom: 0px;
     z-index: 10;
 }
-.headerMainPics .car {
+.header__main-pics .header__car {
     background-image: url("../media/car.png");
     background-position: center;
     background-size: contain;
@@ -286,7 +286,7 @@ nav .menuOn li {
     z-index: 0;
 }
 
-header .phoneImg {
+header .header__phone-img {
     position: absolute;
     right: 18vw; 
     top: 70%;
@@ -302,8 +302,8 @@ header .phoneImg {
     color: #fff;
     cursor: pointer;
 }
-header .phoneImg::after,
-header .phoneImg::before {
+header .header__phone-img::after,
+header .header__phone-img::before {
     content: "";
     position: absolute;
     width: 136px;
@@ -312,7 +312,7 @@ header .phoneImg::before {
     background-color: rgba(61, 155, 233, 0.3);
     animation: pulse 1.5s linear infinite;
 }
-header .phoneImg::after {
+header .header__phone-img::after {
     animation-delay: 0.5s;
 }
 @keyframes pulse {
@@ -332,44 +332,44 @@ header .phoneImg::after {
 
 
 @media(max-width: 1500px) {
-    .headerMainTitle {
+    .header__main-title {
         margin-bottom: 50px;
     }
-   .headerMainTitle .title h1 {
+   .header__main-title .header__title h1 {
         font-size: 60px;
         line-height: 60px;
     }
-    .headerMainTitle .iconContainer {
+    .header__main-title .header__icon-container {
         flex-wrap: wrap;
     }
     
-    .headerMainPics {
+    .header__main-pics {
         grid-template-rows: 90px 248px 90px;
     }
 }
 @media(max-width: 1400px) {
-    nav .phone {
+    nav .header__phone {
         grid-row: 2/3;
         justify-self: flex-start;
         white-space: nowrap;
     }
     
-    .headerMainPics {
+    .header__main-pics {
         grid-template-rows: 100px 248px 100px;
     }
 
 } 
 @media(max-width: 1200px) {
-    .headerMainPics .man, .headerMainPics .car {
+    .header__main-pics .header__man, .header__main-pics .header__car {
         display: none;
     }
-    .headerMain {
+    .header__main {
         justify-content: center;
     }
-    .headerMain .headerMainPics {
+    .header__main .header__main-pics {
         display: none;
     }
-    header .phoneImg {
+    header .header__phone-img {
         top: 40%;
     }
 }
@@ -387,7 +387,7 @@ header .phoneImg::after {
         align-items: flex-end;
     }
     
-    nav .menuBtn{
+    nav .header__menu-btn {
             display: block;
             grid-column: 3/4;
             justify-self: flex-end;
@@ -395,20 +395,20 @@ header .phoneImg::after {
 }
 
 @media (max-width: 576px) {
-    .headerMainTitle .title h1 {
+    .header__main-title .header__title h1 {
         font-size: 30px;
         line-height: 30px;
     }
-    .headerMain .headerMainTitle .button {
+    .header__main .header__main-title .header__button {
         margin: 0 auto;
     }
-    .headerMain .headerMainTitle .button::before{
+    .header__main .header__main-title .header__button::before{
         content: none;
     }
-    .headerMain .headerMainTitle .iconContainer {
+    .header__main .header__main-title .header__icon-container {
         display: none;
     }
-    header .phoneImg {
+    header .header__phone-img {
         display: none;
     }
 }
@@ -417,7 +417,7 @@ main {
     width: 100%;
 }
 /*---- howItWorks ----*/
-.stepCards {
+.hiw__step-cards {
     width: 57vw;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -425,31 +425,31 @@ main {
     grid-column-gap: 7vw;
     grid-row-gap: 5vh;
 }
-.sliderTriggers {
+.hiw__slider-triggers {
     display: none;
 }
-.sliderMarkers {
+.hiw__slider-markers {
     display: none;
 }
 
-.stepItem {
+.hiw__step-item {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
-.stepPosition {
+.hiw__step-position {
     position: relative;
     top: 12px;
     left: -40px;
 }
-.stepTitle {
+.hiw__step-title {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     margin-bottom: 15px;
 }
-.stepDescr {
+.hiw__step-descr {
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -458,7 +458,7 @@ main {
 
 
 @media (max-width: 992px) {
-    .stepCards {
+    .hiw__step-cards {
         position: relative;
         /* left: 50px; */
         display: flex;
@@ -466,12 +466,12 @@ main {
         align-items: center;
         height: auto;
     }
-    .stepItem {
+    .hiw__step-item {
         width: 90%;
         height: 150px;
 
     }
-    .sliderTriggers {
+    .hiw__slider-triggers {
         width: 130%;
         display: flex;
         justify-content: space-between;
@@ -481,21 +481,21 @@ main {
         position: relative;
         bottom: 200px;
     }
-    .trigger {
+    .hiw__trigger {
         color: #333;
         font-size: 42px;
         cursor: pointer;
         transition: color 0.5s ease;
     }
-    .trigger:hover {
+    .hiw__trigger:hover {
         color: #FED100;
     }
-    .sliderMarkers {
+    .hiw__slider-markers {
         display: flex;
         position: relative;
         top: 70px;
     }
-    .sliderMarkers > div {
+    .hiw__slider-markers > div {
         width: 15px;
         height: 15px;
         border-radius: 50%;
@@ -506,16 +506,16 @@ main {
     }
 }
 @media (max-width: 768px) {
-    .stepPosition {
+    .hiw__step-position {
         left: -10px;
     }
-    .stepPosition img {
+    .hiw__step-position img {
         transform: scale(0.7);
     }
-    .stepTitle {
+    .hiw__step-title {
         font-size: 18px;
     }
-    .stepDescr {
+    .hiw__step-descr {
         font-size: 14px;
         line-height: 21px;
     }
@@ -525,13 +525,13 @@ main {
 
 /*----- priceBlock -----*/
 
-.priceBlock .sectionWrap {
+.main__price-block .sectionWrap {
     min-width: 0; 
 }
-.priceBlock .swiper {
+.main__price-block .swiper {
     max-width: 69vw;
 }
-.card {
+.pb__card {
     padding: 84px 13px 79px;
     border: 1px solid #ebebeb;
     display: flex;
@@ -539,35 +539,35 @@ main {
     align-items: center;
     
 }
-.card:hover {
+.pb__card:hover {
     border: 1px solid #FED100;
 
 }
 
-.cardPrice {
+.pb__card-price {
     font-style: normal;
     font-weight: 600;
     font-size: 30px;
     line-height: 37px;
     margin: 47px 0 52px;
 }
-.card .itemTitle {
+.pb__card .itemTitle {
     margin-bottom: 47px;
 }
 
 /*----- truck fleet -----*/
-.truckOrder {
+.tf__truck-order {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.buttonSet {
+.tf__button-set {
     display: grid;
     grid-template-columns: repeat(3, 201px);
     grid-gap: 19px;
     margin-bottom: 47px;
 }
-.buttonSet button {
+.tf__button-set button {
     width: 201px;
     height: 50px;
     border: 1px solid #ebebeb;
@@ -576,17 +576,17 @@ main {
     font-size: 20px;
     line-height: 24px;
 }
-.buttonSet button:hover {
+.tf__button-set button:hover {
     border: 1px solid #FED100;
 }
-.buttonSet button:active {
+.tf__button-set button:active {
     border: 1px solid #FED100;
 }
 .invisible {
     display: none;
 }
 
-.truckInfo {
+.tf__truck-info {
     width: 52.2vw;
     height: auto;
     display: grid;
@@ -595,19 +595,19 @@ main {
 
 }
 @media(max-width: 992px) {
-    .truckInfo {
+    .tf__truck-info {
         display: grid;
         grid-template-columns: 250px;
         grid-auto-rows: minmax(277px, auto);
         grid-gap: 20px;
         justify-content: center;
     }
-    .truckInfo .truckImg {
+    .tf__truck-info .tf__truck-img {
         grid-row: 1;
     }
 }
 @media(max-width: 768px) {
-    .buttonSet {
+    .tf__button-set {
         display: grid;
         grid-template-columns: 201px;
         grid-template-rows: repeat(3, auto);
@@ -618,44 +618,44 @@ main {
 }
 
 
-.truckInfo .truckImg {
+.tf__truck-info .tf__truck-img {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
-.truckInfo .truckDescr {
+.tf__truck-info .tf__truck-descr {
     margin: auto 0;
 }
-.truckInfo .truckDescr .itemTitle {
+.tf__truck-info .tf__truck-descr .itemTitle {
     margin-bottom: 24px;
 }
-.truckDescr .fa-solid {
+.tf__truck-descr .fa-solid {
     margin-right: 15px;
 }
-.truckDescr button {
+.tf__truck-descr button {
     margin-top: 22px;
 }
 /*----- feedback -----*/
-.feedback {
+.main__feedback {
     background-color: #FED100;
 }
-.feedback .sectionWrap { /*for swiper*/
+.main__feedback .sectionWrap { /*for swiper*/
     min-width: 0; 
 }
 
-.feedback .swiper {
+.main__feedback .swiper {
     max-width: 80vw;
 }
 
-.feedbackItem span {
+.feedback__feedback-item span {
     color: #FF352B;
     margin-left: 8.5px;
 }
-.feedbackItem a {
+.feedback__feedback-item a {
     text-decoration: underline;
     cursor: pointer;
 }
-.feedback button {
+.main__feedback button {
     margin-top: 61px;
     width: 250px;
     height: 50px;
@@ -667,25 +667,25 @@ main {
 }
 
 @media(max-width: 1400px) {
-    .feedback button {
+    .main__feedback button {
         display: none;
     }
 }
 
 
 /*----- order -----*/
-.order {
+.main__order {
     padding-left: 23.8vw;
     align-items: flex-start;
 }
-.order form {
+.main__order form {
     display: flex;
     flex-wrap: wrap;
 }
-.order form .inputField {
+.main__order form .order__input-field {
     position: relative;
 }
-.order form .inputField .inputPlaceholder {
+.main__order form .order__input-field .order__input-placeholder {
     position: absolute;
     bottom: 40px;
     left: 0;
@@ -696,7 +696,7 @@ main {
     pointer-events: none;
     transition: all 0.2s ease;
 }
-.order form .input {
+.main__order form .order__input {
     width: 300px;
     height: 55px;
     border: none;
@@ -710,26 +710,26 @@ main {
     color: rgba(51, 51, 51, 1);
     transition: all 0.2s ease;
 }
-.order form .input:hover {
+.main__order form .order__input:hover {
     background-color: rgba(0, 0, 0, 0.04);;
 }
-.order form .input:focus {
+.main__order form .order__input:focus {
     background-color: #FED100;
 }
-.order form .input:focus + .inputPlaceholder {
+.main__order form .order__input:focus + .order__input-placeholder {
     transform: translate(-20px, -25px) scale(0.5);
     font-weight: 700;
     color: #333;
 }
-.order form .input:not(:placeholder-shown) {
+.main__order form .order__input:not(:placeholder-shown) {
     background-color: #FED100;
 }
-.order form .input:not(:placeholder-shown) + .inputPlaceholder {
+.main__order form .order__input:not(:placeholder-shown) + .order__input-placeholder {
     transform: translate(-20px, -25px) scale(0.5);
     font-weight: 700;
     color: #333;
   }
-.order form .callMeButton {
+.main__order form .order__call-me-button {
     width: 250px;
     height: 50px;
     background-color: #FF352B;
@@ -744,19 +744,19 @@ main {
 
 }
 
-.order form .callMeButton:active {
+.main__order form .order__call-me-button:active {
     transform: translate(10px, 10px);
     border: 1px solid #FED100;
 
 }
-.order form .agreement {
+.main__order form .order__agreement {
     font-weight: 400;
     font-size: 12px;
     line-height: 15px;
     display: flex;
     align-items: center;
 }
-.order form .agreement input {
+.main__order form .order__agreement input {
     margin-right: 10px;
     margin-top: 0;
     width: 15px;
@@ -769,7 +769,7 @@ main {
     position: relative;
     box-shadow: none;
 }
-.order form .agreement input:checked::after {
+.main__order form .order__agreement input:checked::after {
     content: url("../media/checkmarkpure.svg");
     position: absolute;
     bottom: -2px;
@@ -779,10 +779,10 @@ main {
 }
 
 @media(max-width: 576px) {
-    .order {
+    .main__order {
     padding-left: 10vw;
     }
-    .order form .input {
+    .main__order form .order__input {
         width: 250px;
         margin-right: 0;
     }
@@ -792,7 +792,7 @@ main {
 address {
     position: relative;
 }
-address .location {
+address .address__location {
     width: 100%;
     text-align: center;
 }
@@ -800,7 +800,7 @@ iframe {
     width: 100%;
     height: 60vh;
 }
-address .mapCard {
+address .address__map-card {
     width: 368px;
     height: 326px;
     background-color: #fff;
@@ -812,20 +812,20 @@ address .mapCard {
     top: 25%;
     left: 20%;
 }
-address .mapCard .mapInfo {
+address .address__map-card .address__map-info {
     margin: 40px 0;
 }
-address .mapCard .mapInfo p:nth-child(2) {
+address .address__map-card .address__map-info p:nth-child(2) {
     margin: 20px 0;
 }
-address .mapCard .mapInfo p span {
+address .address__map-card .address__map-info p span {
     color: #FED100;
     margin-right: 15px;
 }
-address .mapCard .mapInfo p:last-child a {
+address .address__map-card .address__map-info p:last-child a {
     position: relative;
 }
-address .mapCard .mapInfo p:last-child a::after{
+address .address__map-card .address__map-info p:last-child a::after{
     content: "";
     height: 1px;
     width: 100%;
@@ -834,20 +834,20 @@ address .mapCard .mapInfo p:last-child a::after{
     bottom: 0;
     left: 0px;
 }
-address .mapCard .social {
+address .address__map-card .address__social {
     align-self: flex-end;
     display: flex;
 }
-address .mapCard .social p:nth-child(-n+3) {
+address .address__map-card .address__social p:nth-child(-n+3) {
     margin-right: 25px;
 
 }
-address .mapCard .social p .fa-brands{
+address .address__map-card .address__social p .fa-brands{
     width: 18px;
     height: 18px;
 }
 @media(max-width: 992px) {
-    address .mapCard {
+    address .address__map-card {
         display: none;
     }
 }
@@ -857,13 +857,13 @@ footer {
     background-color: #FED100;
     
 }
-.footerText {
+.footer__footer-text {
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
 }
-.footerWrap {
+.footer__wrap {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(145px, 250px));
@@ -871,29 +871,29 @@ footer {
     grid-row-gap: 20px;
     justify-content: center;
 }
-.footerLogo p:nth-child(2) {
+.footer__logo p:nth-child(2) {
     margin: 36px 0;
 }
-.footerNav ul {
+.footer__nav ul {
     list-style: none;
 }
-.footerNav ul li {
+.footer__nav ul li {
     margin-bottom: 15px;
 }
-.footerSocial .fa-brands{
+.footer__footer-social .fa-brands{
     width: 18px;
     height: 18px;
 }
 
-.footerSocial p span:nth-child(-n+3) {
+.footer__footer-social p span:nth-child(-n+3) {
     margin-right: 27px;
  
 }
-.footerSocial p:last-child a {
+.footer__footer-social p:last-child a {
     position: relative;
     margin-top: 20px;
 }
-.footerSocial p:last-child a::after{
+.footer__footer-social p:last-child a::after{
     content: "";
     height: 1px;
     width: 100%;
@@ -902,20 +902,20 @@ footer {
     bottom: 0;
     left: 0px;
 }
-.footerPhoneback {
+.footer__footer-phoneback {
     text-align: center;
 }
-.footerPhoneback button{
+.footer__footer-phoneback button{
     width: 250px;
     height: 44px;
     background-color: #FED100;
     border: 1px solid #333333;
 }
-.footerPhoneback a {
+.footer__footer-phoneback a {
     margin-top: 5px;
     position: relative;
 }
-.footerPhoneback a::after {
+.footer__footer-phoneback a::after {
     content: "";
     height: 1px;
     width: 100%;
