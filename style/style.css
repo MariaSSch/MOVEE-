@@ -30,15 +30,22 @@
     text-decoration: none;
     outline: none;
     box-sizing: border-box;
+    
 
 }
 body {
     color: #333333;
+    max-width: 1928px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+
 }
  
 /*----- section paddings -----*/
 .main__how-it-work {
-    padding: 47px 0 61px;
+    padding: 47px 1vw 61px;
 }
 .main__price-block {
     padding: 43px 0 83px;
@@ -47,7 +54,7 @@ body {
     padding: 71px 0 63px;
 }
 .main__feedback {
-    padding: 83px 0 111px;
+    padding: 83px 1vw 111px;
 }
 .main__order {
     padding: 107px 0 123px;
@@ -91,6 +98,7 @@ section, .section {
     display: flex;
     justify-content: center;
     margin-top: 60px;
+    width: 100%;
 }
 .item-info, .icon-descr {
     font-style: normal;
@@ -133,7 +141,7 @@ header {
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
-    padding: 70px 10.5vw 158px 15.4vw;
+    padding: 70px 10.5% 158px 15.4%;
     /*position: relative; /*for phoneImg*/
 
 }
@@ -354,7 +362,7 @@ header .header__phone-img::after {
 
 @media(max-width: 1600px) {
     header {
-        padding: 70px 10.5vw 50px 15.4vw;
+        padding: 70px 10.5% 50px;
     }
     .header__main-title .header__icon-container {
         display: grid;
@@ -422,12 +430,24 @@ header .header__phone-img::after {
     header .header__phone-img {
         display: none;
     }
-
-}
-@media (max-width: 576px) {
+    .header__phone-img-container {
+        display: none;
+    }
     header {
         background-image: none;
     }
+    .header__main {
+        margin: 0;
+    }
+    .header__main .header__main-title .header__icon-container {
+        display: none;
+    }
+}
+@media (max-width: 576px) {
+    /* header {
+        background-image: none;
+        
+    } */
     .header__main-title .header__title h1 {
         font-size: 30px;
         line-height: 30px;
@@ -438,9 +458,9 @@ header .header__phone-img::after {
     .header__main .header__main-title .header__button::before{
         content: none;
     }
-    .header__main .header__main-title .header__icon-container {
+    /* .header__main .header__main-title .header__icon-container {
         display: none;
-    }
+    } */
 }
 
 main {
@@ -617,7 +637,7 @@ main {
 }
 
 .tf__truck-info {
-    width: 52.2vw;
+    width: 100%;
     height: auto;
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -725,8 +745,11 @@ main {
 
 /*----- order -----*/
 .main__order {
-    padding-left: 23.8vw;
+    padding-left: 23.8%;
     align-items: flex-start;
+}
+.order-wrap {
+    justify-content: flex-start;
 }
 .main__order form {
     display: flex;
@@ -737,7 +760,7 @@ main {
 }
 .main__order form .order__input-field span {
     position: absolute;
-    bottom: 10px;/*40*/
+    bottom: 50px;
     left: 0;
     font-weight: 500;
     font-size: 20px;
@@ -856,6 +879,7 @@ main {
 /*----- address -----*/
 address {
     position: relative;
+    width: 100%;
 }
 address .address__location {
     width: 100%;
